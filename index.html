@@ -453,20 +453,30 @@
                 padding: 16px 32px;
                 font-size: 0.7rem;
             }
+
+            .flower-illustration {
+                transform: scale(0.45);
+            }
+            .success-view.active .flower-illustration {
+                transform: scale(0.55);
+            }
+
+            #flower1 { top: 2% !important; left: 2% !important; }
+            #flower3 { top: 2% !important; right: 2% !important; }
+            #flower5 { bottom: 2% !important; left: 2% !important; }
+            #flower6 { bottom: 2% !important; right: 2% !important; }
+
+            .flower-illustration:not(#flower1):not(#flower3):not(#flower5):not(#flower6) {
+                display: none !important;
+            }
         }
 
         @media (max-width: 600px) {
             .flower-illustration {
-                transform: scale(0.56);
+                transform: scale(0.4);
             }
             .success-view.active .flower-illustration {
-                transform: scale(0.7);
-            }
-            .flower-illustration:nth-child(5),
-            .flower-illustration:nth-child(7),
-            .flower-illustration:nth-child(9),
-            .flower-illustration:nth-child(11) {
-                display: none;
+                transform: scale(0.5);
             }
         }
 
@@ -502,10 +512,12 @@
             }
 
             .flower-illustration {
-                transform: scale(0.4);
+                transform: scale(0.35);
+                opacity: 0;
             }
             .success-view.active .flower-illustration {
-                transform: scale(0.5);
+                transform: scale(0.42);
+                opacity: 0.45;
             }
 
             .success-image-frame {
@@ -525,10 +537,11 @@
 
         @media (max-width: 393px) and (max-height: 852px) {
             .flower-illustration {
-                transform: scale(0.35);
+                transform: scale(0.3);
             }
             .success-view.active .flower-illustration {
-                transform: scale(0.45);
+                transform: scale(0.38);
+                opacity: 0.4;
             }
 
             .success-image-frame {
